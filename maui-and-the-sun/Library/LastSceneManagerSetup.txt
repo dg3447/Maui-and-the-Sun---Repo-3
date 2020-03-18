@@ -1,5 +1,13 @@
 sceneSetups:
+<<<<<<< Updated upstream
 - path: Assets/Scenes/Level 3 v1.0.unity
+=======
+<<<<<<< Updated upstream
+- path: Assets/Project- Bishesh/Scenes/Level-2.unity
+=======
+- path: Assets/1Komal/Sunset -Sky/Scene/Level1.unity
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
   isLoaded: 1
   isActive: 1
   isSubScene: 0
