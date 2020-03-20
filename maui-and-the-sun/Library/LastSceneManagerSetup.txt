@@ -1,5 +1,10 @@
 sceneSetups:
-- path: Assets/Project- Bishesh/Scenes/Level-2.unity
+<<<<<<< Updated upstream
+- path: Assets/1Komal/Sunset -Sky/Scene/Level1.unity
+=======
+- path: Assets/Forest Sprite Pack/Sprites/Scenes/Playable Demo Scene/Playable Demo
+    Scene - Heavy.unity
+>>>>>>> Stashed changes
   isLoaded: 1
   isActive: 1
   isSubScene: 0
