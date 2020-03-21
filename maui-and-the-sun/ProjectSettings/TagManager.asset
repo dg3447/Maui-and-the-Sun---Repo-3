@@ -41,27 +41,27 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Sky background
+  - name: Sky
     uniqueID: 376754293
     locked: 0
-  - name: Clouds, mountain,sun
+  - name: Clouds
     uniqueID: 1037396737
     locked: 0
-  - name: platform,trees,grass
+  - name: Mountain
     uniqueID: 3491734213
     locked: 0
-  - name: player layer
+  - name: BackGround 1
     uniqueID: 1406730751
     locked: 0
-  - name: screen layer
+  - name: BackGround 2
     uniqueID: 37853041
     locked: 0
-  - name: 
+  - name: BackGround 3
     uniqueID: 872497649
     locked: 0
-  - name: 
+  - name: Player Ground
     uniqueID: 2560593471
     locked: 0
-  - name: 
+  - name: Hide Player
     uniqueID: 3059142723
     locked: 0
