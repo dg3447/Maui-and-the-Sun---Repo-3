@@ -10,14 +10,17 @@ public class TimerUI : MonoBehaviour
     int countdownStartValue = 5;
     public Text timerUI;
     [SerializeField]
-    
+    GameObject gameOverScrn;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+        gameOverScrn = GameObject.Find("gameOverScreen");
+        gameOverScrn.SetActive(false);
         countdownTimer();
-       
+
     }
 
     public void countdownTimer()
@@ -33,16 +36,13 @@ public class TimerUI : MonoBehaviour
         {
 
             timerUI.text = "Time up!";
-            endgame();
-           // SceneManager.LoadScene(0);
-           
+            gameOverScrn.SetActive(true);
+            // SceneManager.LoadScene(0);
+
         }
     }
 
-    private void endgame()
-    {
-       // gameOverUI.SetActive(true);
-    }
+    
 
     // Update is called once per frame
     void Update()

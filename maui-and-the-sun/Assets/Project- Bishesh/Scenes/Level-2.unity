@@ -1860,6 +1860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerUI: {fileID: 1042381721}
+  gameOverScrn: {fileID: 1191388434}
 --- !u!1 &1065715508
 GameObject:
   m_ObjectHideFlags: 0
