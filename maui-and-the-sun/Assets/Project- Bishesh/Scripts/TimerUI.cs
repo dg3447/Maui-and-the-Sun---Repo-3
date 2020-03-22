@@ -11,6 +11,7 @@ public class TimerUI : MonoBehaviour
     public Text timerUI;
     [SerializeField]
     GameObject gameOverScrn;
+    GameObject player;
 
 
 
@@ -18,6 +19,7 @@ public class TimerUI : MonoBehaviour
     void Start()
     {
         gameOverScrn = GameObject.Find("gameOverScreen");
+        player = GameObject.Find("Ch-Maui");
         gameOverScrn.SetActive(false);
         countdownTimer();
 
@@ -37,7 +39,8 @@ public class TimerUI : MonoBehaviour
 
             timerUI.text = "Time up!";
             gameOverScrn.SetActive(true);
-            // SceneManager.LoadScene(0);
+            Destroy(player.gameObject);
+          
 
         }
     }
