@@ -39,7 +39,7 @@ public class TimerUI : MonoBehaviour
 
             timerUI.text = "Time up!";
             gameOverScrn.SetActive(true);
-            Destroy(player.gameObject);
+          //  Destroy(player.gameObject);
           
 
         }

@@ -36,7 +36,11 @@ public class PlayerMovement : MonoBehaviour
     private float jumpForce;
 
 
-
+    //healthbar
+    public int maxHealth = 3;
+    public int currentHealth;
+    public HealthBar healthbar;
+   
 
 
     // Start is called before the first frame update
@@ -45,12 +49,24 @@ public class PlayerMovement : MonoBehaviour
         facingRight = true;     //player always face on right direction
         myRigidbody = GetComponent<Rigidbody2D>();  //referencing the rigidbody2d component of the player
         myAnimator = GetComponent<Animator>();     //referencing the Animator component of the player
+        currentHealth = maxHealth;            
+        healthbar.setMaxHealth(maxHealth);       //setting max health for player
     }
 
 
     private void Update() //Update updates once per frame
     {
         HandleInput();
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            takedamage(1);
+        }
+    }
+
+    public void takedamage(int damage)
+    {
+        currentHealth -= damage;
+        healthbar.setHealth(currentHealth);
     }
 
     void FixedUpdate()    //fixedUpdate updates on fixed amount of time, regardless of frames  
@@ -194,6 +210,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+
+
+
 
 
 }
