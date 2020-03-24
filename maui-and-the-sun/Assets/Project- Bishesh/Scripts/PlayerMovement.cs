@@ -57,17 +57,10 @@ public class PlayerMovement : MonoBehaviour
     private void Update() //Update updates once per frame
     {
         HandleInput();
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            takedamage(1);
-        }
+        
     }
 
-    public void takedamage(int damage)
-    {
-        currentHealth -= damage;
-        healthbar.setHealth(currentHealth);
-    }
+   
 
     void FixedUpdate()    //fixedUpdate updates on fixed amount of time, regardless of frames  
     {
@@ -212,7 +205,11 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-
+    public void takedamage(int damage)
+    {
+        currentHealth -= damage;
+        healthbar.setHealth(currentHealth);
+    }
 
 
 }

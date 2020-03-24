@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class TimerUI : MonoBehaviour
 {
-    int countdownStartValue = 5;
+    int countdownStartValue = 10;
     public Text timerUI;
     [SerializeField]
     GameObject gameOverScrn;
@@ -39,7 +39,8 @@ public class TimerUI : MonoBehaviour
 
             timerUI.text = "Time up!";
             gameOverScrn.SetActive(true);
-          //  Destroy(player.gameObject);
+
+            Destroy(player.gameObject);
           
 
         }
