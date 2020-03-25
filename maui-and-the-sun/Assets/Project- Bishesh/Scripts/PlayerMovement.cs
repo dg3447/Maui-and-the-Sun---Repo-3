@@ -168,27 +168,15 @@ public class PlayerMovement : MonoBehaviour
         jumpAttack = false;
     }
 
-    private bool IsGrounded()
+    private bool IsGrounded()   //checking if player is landed on ground
     {
-        if (myRigidbody.velocity.y <= 0)
+        if (isGrounded == true)
         {
-            foreach (Transform point in groundChecks)
-            {
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(point.position, groundRadius, whatIsGround);
+            myAnimator.ResetTrigger("jump");
+            myAnimator.SetBool("land", false);
 
-                for (int i = 0; i < colliders.Length; i++)
-                {
-                    if (colliders[i].gameObject != gameObject)
-                    {
-                        myAnimator.ResetTrigger("jump");
-                        myAnimator.SetBool("land", false);
-                        return true; 
-                    }
-                }
-            }
         }
-
-        return false;
+        return  transform.Find("groundCheck").GetComponent<GroundCheck>().isGrounded;
     }
 
     private void HandleLayers()

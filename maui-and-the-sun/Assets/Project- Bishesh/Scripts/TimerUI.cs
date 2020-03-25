@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class TimerUI : MonoBehaviour
 {
-    int countdownStartValue = 10;
+    int countdownStartValue = 120;
     public Text timerUI;
     [SerializeField]
     GameObject gameOverScrn;
