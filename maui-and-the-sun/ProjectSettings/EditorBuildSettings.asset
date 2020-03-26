@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+  - enabled: 0
+    path: Assets/Project- Bishesh/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Project- Bishesh/Scenes/UI System.unity
+    guid: 9668c62c39386504f89345295fa10d70
+  - enabled: 1
+    path: Assets/Project- Bishesh/Scenes/Level-2.unity
+    guid: f7944cd9a465f124786c6a6151381f81
+  - enabled: 1
+    path: Assets/1Komal/Sunset -Sky/Scene/Level1.unity
+    guid: fe738a525ef14114aa9037aa668c744f
+  - enabled: 1
+    path: Assets/Scenes/Level 3 v1.0.unity
+    guid: f39b0744ff88bd5428cf13334a6d9059
   m_configObjects: {}
