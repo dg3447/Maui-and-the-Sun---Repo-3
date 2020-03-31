@@ -3,9 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - gameOver
-  - enemy
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -15,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - ground
+  - 
   - 
   - 
   - 
@@ -43,27 +41,27 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Sky
+  - name: Sky background
     uniqueID: 376754293
     locked: 0
-  - name: Clouds
+  - name: Clouds, mountain,sun
     uniqueID: 1037396737
     locked: 0
-  - name: Mountain
+  - name: platform,trees,grass
     uniqueID: 3491734213
     locked: 0
-  - name: BackGround 1
+  - name: player layer
     uniqueID: 1406730751
     locked: 0
-  - name: BackGround 2
+  - name: screen layer
     uniqueID: 37853041
     locked: 0
-  - name: BackGround 3
+  - name: 
     uniqueID: 872497649
     locked: 0
-  - name: Player Ground
+  - name: 
     uniqueID: 2560593471
     locked: 0
-  - name: Hide Player
+  - name: 
     uniqueID: 3059142723
     locked: 0

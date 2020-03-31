@@ -36,11 +36,7 @@ public class PlayerMovement : MonoBehaviour
     private float jumpForce;
 
 
-    //healthbar
-    public int maxHealth = 3;
-    public int currentHealth;
-    public HealthBar healthbar;
-   
+
 
 
     // Start is called before the first frame update
@@ -49,18 +45,13 @@ public class PlayerMovement : MonoBehaviour
         facingRight = true;     //player always face on right direction
         myRigidbody = GetComponent<Rigidbody2D>();  //referencing the rigidbody2d component of the player
         myAnimator = GetComponent<Animator>();     //referencing the Animator component of the player
-        currentHealth = maxHealth;            
-        healthbar.setMaxHealth(maxHealth);       //setting max health for player
     }
 
 
     private void Update() //Update updates once per frame
     {
         HandleInput();
-        
     }
-
-   
 
     void FixedUpdate()    //fixedUpdate updates on fixed amount of time, regardless of frames  
     {
@@ -168,15 +159,27 @@ public class PlayerMovement : MonoBehaviour
         jumpAttack = false;
     }
 
-    private bool IsGrounded()   //checking if player is landed on ground
+    private bool IsGrounded()
     {
-        if (isGrounded == true)
+        if (myRigidbody.velocity.y <= 0)
         {
-            myAnimator.ResetTrigger("jump");
-            myAnimator.SetBool("land", false);
+            foreach (Transform point in groundChecks)
+            {
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(point.position, groundRadius, whatIsGround);
 
+                for (int i = 0; i < colliders.Length; i++)
+                {
+                    if (colliders[i].gameObject != gameObject)
+                    {
+                        myAnimator.ResetTrigger("jump");
+                        myAnimator.SetBool("land", false);
+                        return true; 
+                    }
+                }
+            }
         }
-        return  transform.Find("groundCheck").GetComponent<GroundCheck>().isGrounded;
+
+        return false;
     }
 
     private void HandleLayers()
@@ -190,13 +193,6 @@ public class PlayerMovement : MonoBehaviour
             myAnimator.SetLayerWeight(1, 0);
         }
 
-    }
-
-
-    public void takedamage(int damage)
-    {
-        currentHealth -= damage;
-        healthbar.setHealth(currentHealth);
     }
 
 
