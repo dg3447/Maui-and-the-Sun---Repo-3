@@ -23,17 +23,17 @@ public class ModeSelection : MonoBehaviour
         if (easy.isOn)
         {
             Debug.Log("easy");
-            SceneManager.LoadScene("Level1");
+            TimerUI.countdownStartValue = 600;
         }
         else if (intermediate.isOn)
         {
             Debug.Log("intermediate");
-            SceneManager.LoadScene("Level-2");
+            TimerUI.countdownStartValue = 300;
         }
         else if (hard.isOn)
         {
             Debug.Log("hard");
-            SceneManager.LoadScene("Level 3 v1.0");
+            TimerUI.countdownStartValue = 150;
         }
     }
    
