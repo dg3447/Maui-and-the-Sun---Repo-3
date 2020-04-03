@@ -8,24 +8,26 @@ public class DoDamageOnTrigger : MonoBehaviour
 {
     public PlayerMovement Damage;
     public TimerUI gameOver;
+    bool isDamage;
     
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Ch-Maui")
+        if (collision.gameObject.name == "Ch-Maui" && !isDamage)
         {
             FindObjectOfType<AudioManager>().Play("button_press"); //playing sound
-
+            isDamage = true;
             Damage.takedamage(1);
-            if (Damage.currentHealth <= 0)
-            {
-                Debug.Log("player died");
-            }
-            else
-            {
 
-            }
-            
+            Damage.myAnimator.SetLayerWeight(2, 1);
         }
     }
+    private void OnTriggerExit2D (Collider2D collision)
+    {
+      
+        isDamage = false;
+        Damage.myAnimator.SetLayerWeight(2, 0);
+    }
+
+
 }

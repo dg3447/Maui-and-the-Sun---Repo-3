@@ -2095,7 +2095,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 802486211}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f25b9bb175a0f50489cae9b5f50792b2, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -5683,6 +5683,16 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 15.376506
       objectReference: {fileID: 0}
+    - target: {fileID: 9192078888017162386, guid: edfc55d639255b641b04eb4c35948919,
+        type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192078888017162386, guid: edfc55d639255b641b04eb4c35948919,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: f25b9bb175a0f50489cae9b5f50792b2, type: 2}
     - target: {fileID: 9192078888017162387, guid: edfc55d639255b641b04eb4c35948919,
         type: 3}
       propertyPath: heathbar

@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     private Rigidbody2D myRigidbody;
-    private Animator myAnimator;
+    public Animator myAnimator;
 
     [SerializeField]
     private float MovementSpeed;
@@ -196,7 +196,15 @@ public class PlayerMovement : MonoBehaviour
     public void takedamage(int damage)
     {
         currentHealth -= damage;
+       
         healthbar.setHealth(currentHealth);
+
+       
+
+        if (currentHealth<0)
+        {
+            myAnimator.SetTrigger("dead");
+        }
     }
 
 
