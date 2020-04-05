@@ -50,6 +50,10 @@ public class PlayerMovement : MonoBehaviour
     {
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
+
+        ItemWorld.spawnItemWorld(new Vector3(20, 0), new items { itemType = items.ItemType.hoe, amount = 1 });
+        ItemWorld.spawnItemWorld(new Vector3(-2, 0), new items { itemType = items.ItemType.paddle, amount = 1 });
+        ItemWorld.spawnItemWorld(new Vector3(5, 0), new items { itemType = items.ItemType.patu, amount = 1 });
     }
 
 
