@@ -50,13 +50,18 @@ public class PlayerMovement : MonoBehaviour
     {
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
-
-        ItemWorld.spawnItemWorld(new Vector3(20, 0), new items { itemType = items.ItemType.hoe, amount = 1 });
-        ItemWorld.spawnItemWorld(new Vector3(-2, 0), new items { itemType = items.ItemType.paddle, amount = 1 });
-        ItemWorld.spawnItemWorld(new Vector3(5, 0), new items { itemType = items.ItemType.patu, amount = 1 });
     }
 
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        ItemWorld itemWorld = collision.GetComponent<ItemWorld>();
+        if (itemWorld != null)
+        {
+            inventory.addItem(itemWorld.GetItem());
+            itemWorld.DestroySelf();
+                
+        }
+    }
 
 
     // Start is called before the first frame update

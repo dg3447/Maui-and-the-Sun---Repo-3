@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
+
+[Serializable]
 public class items 
 {
     public enum ItemType
@@ -32,6 +35,22 @@ public class items
             case ItemType.chicken: return ItemAssets.Instance.chickenSprite;
             case ItemType.pumpkin: return ItemAssets.Instance.pumpkinSprite;
 
+        }
+    }
+
+
+    public bool IsStackable()
+    {
+        switch (itemType)
+        {
+            default:
+            case ItemType.hoe:
+            case ItemType.paddle:
+            case ItemType.patu:
+            return true;
+
+            case ItemType.banana:
+             return false;
         }
     }
 

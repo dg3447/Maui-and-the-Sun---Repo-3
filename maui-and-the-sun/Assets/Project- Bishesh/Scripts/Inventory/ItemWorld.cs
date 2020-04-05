@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ItemWorld : MonoBehaviour
 {
     
@@ -19,14 +20,31 @@ public class ItemWorld : MonoBehaviour
 
     private items items;
     private SpriteRenderer spriteRender;
+    
+
 
     private void Awake()
     {
         spriteRender = GetComponent<SpriteRenderer>();
+       
     }
+
+
     public void SetItem(items items)
     {
         this.items = items;
         spriteRender.sprite = items.GetSprite();
+      
     }
+
+    public items GetItem()
+    {
+        return items;
+    }
+
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
+
 }
