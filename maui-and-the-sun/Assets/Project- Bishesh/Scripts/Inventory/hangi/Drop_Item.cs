@@ -12,7 +12,7 @@ public class Drop_Item : MonoBehaviour, IDragHandler
         Debug.Log("Drop received");
         if (eventData.pointerDrag != null)
         {
-            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+           
         }
     }
 }

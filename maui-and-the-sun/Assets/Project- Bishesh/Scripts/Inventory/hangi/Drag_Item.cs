@@ -8,40 +8,44 @@ public class Drag_Item : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
 
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
-    private Vector3 startPosition;
-    
-   
+    private Vector2 startPosition;
+
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
-        
+
+    }
+    private void Start()
+    {
+        startPosition = rectTransform.anchoredPosition;
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        startPosition = transform.position;
-       
+      
+
         rectTransform.SetAsLastSibling();
-       
+
         canvasGroup.alpha = .6f;
         canvasGroup.blocksRaycasts = false;
-        
+
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-       rectTransform.anchoredPosition += eventData.delta;
+        rectTransform.anchoredPosition += eventData.delta;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        transform.position = startPosition;
+        rectTransform.anchoredPosition = startPosition;
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-       
+
     }
 }
