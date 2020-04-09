@@ -30,7 +30,8 @@ public class UI_Item : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IE
 
     public void OnDrag(PointerEventData eventData)
     {
-        //rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+       // rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+       
     }
 
     public void OnEndDrag(PointerEventData eventData)

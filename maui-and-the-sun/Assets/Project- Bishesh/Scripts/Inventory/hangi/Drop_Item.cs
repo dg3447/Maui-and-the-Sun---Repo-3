@@ -10,9 +10,6 @@ public class Drop_Item : MonoBehaviour, IDragHandler
     public void OnDrag(PointerEventData eventData)
     {
         Debug.Log("Drop received");
-        if (eventData.pointerDrag != null)
-        {
-           
-        }
+        
     }
 }
