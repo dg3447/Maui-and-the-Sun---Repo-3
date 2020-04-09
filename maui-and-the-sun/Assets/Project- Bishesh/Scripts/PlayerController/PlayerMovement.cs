@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -42,21 +44,35 @@ public class PlayerMovement : MonoBehaviour
     public HealthBar healthbar;
 
     private Inventory inventory;
+   
+
     [SerializeField]
     private UI_Inventory uiInventory;
 
 
     private void Awake()
     {
-        inventory = new Inventory();
+
+        inventory = new Inventory(UseItem, 25);
         uiInventory.SetInventory(inventory);
     }
 
+    public void UseItem(items inventoryItem)
+    {
+        GetInventory();
+    }
+    public Inventory GetInventory()
+    {
+        return inventory;
+    }
+
+//collecting Ingredients
     private void OnTriggerEnter2D(Collider2D collision)
     {
         ItemWorld itemWorld = collision.GetComponent<ItemWorld>();
         if (itemWorld != null)
         {
+
             inventory.addItem(itemWorld.GetItem());
             itemWorld.DestroySelf();
                 
@@ -64,7 +80,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    // Start is called before the first frame update
     void Start()
     {
         facingRight = true;     //player always face on right direction
@@ -75,10 +90,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    private void Update() //Update updates once per frame
+    private void Update() 
     {
         HandleInput();
-        
     }
 
    

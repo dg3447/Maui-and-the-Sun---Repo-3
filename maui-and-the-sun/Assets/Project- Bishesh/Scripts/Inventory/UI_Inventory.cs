@@ -15,6 +15,7 @@ public class UI_Inventory : MonoBehaviour
     {
         itemSlotContainer = transform.Find("ItemSlotContainer");
         itemSlotTemplate = itemSlotContainer.Find("ItemSlotTemplate");
+        itemSlotTemplate.gameObject.SetActive(false);
     }
 
 
@@ -44,24 +45,44 @@ public class UI_Inventory : MonoBehaviour
         int y = 0;
         float itemSlotCellSize = 30f;
 
-        foreach (items item in inventory.GetItemList())
+        foreach (Inventory.InventorySlot inventorySlot in inventory.GetInventorySlotArray())
         {
+            items items = inventorySlot.GetItem();
            RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
             
-            itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, -y * itemSlotCellSize);
-            Image image =    itemSlotRectTransform.Find("image").GetComponent<Image>();
-            image.sprite = item.GetSprite();
+            
 
-            TextMeshProUGUI uiText = itemSlotRectTransform.Find("amountText").GetComponent<TextMeshProUGUI>();
-            if (item.amount>1)
+            //TextMeshProUGUI uiText = itemSlotRectTransform.Find("amountText").GetComponent<TextMeshProUGUI>();
+            //if (items.amount>1)
+            //{
+            //    uiText.SetText(items.amount.ToString());
+            //}
+            //else
+            //{
+            //    uiText.SetText("");
+            //}
+
+            itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, -y * itemSlotCellSize);
+
+            if (!inventorySlot.IsEmpty())
             {
-                uiText.SetText(item.amount.ToString());
+                // Not Empty, has Item
+                Transform uiItemTransform = Instantiate(pfUI_Item, itemSlotContainer);
+                uiItemTransform.GetComponent<RectTransform>().anchoredPosition = itemSlotRectTransform.anchoredPosition;
+                UI_Item uiItem = uiItemTransform.GetComponent<UI_Item>();
+                uiItem.SetItem(items);
+                uiItem.SetSprite(items.GetSprite());
             }
-            else
-            {
-                uiText.SetText("");
-            }
+
+            Inventory.InventorySlot tmpInventorySlot = inventorySlot;
+
+            UI_ItemSlot uiItemSlot = itemSlotRectTransform.GetComponent<UI_ItemSlot>();
+            uiItemSlot.SetOnDropAction(() => {
+                // Dropped on this UI Item Slot
+                items draggedItem = UI_ItemDrag.Instance.GetItem();
+                inventory.AddItem(draggedItem, tmpInventorySlot);
+            });
 
             x++;
             if (x > 4)
