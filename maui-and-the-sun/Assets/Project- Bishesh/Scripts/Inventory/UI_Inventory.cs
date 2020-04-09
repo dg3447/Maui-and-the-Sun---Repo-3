@@ -6,6 +6,7 @@ using TMPro;
 
 public class UI_Inventory : MonoBehaviour
 {
+    [SerializeField] private Transform pfUI_Item;
     private Inventory inventory; //ref
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;

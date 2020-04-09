@@ -25,6 +25,10 @@ public class items
 
     public Sprite GetSprite()
     {
+        return GetSprite(itemType);
+    }
+    public Sprite GetSprite(ItemType itemType)
+    {
         switch (itemType)
         {
             default:

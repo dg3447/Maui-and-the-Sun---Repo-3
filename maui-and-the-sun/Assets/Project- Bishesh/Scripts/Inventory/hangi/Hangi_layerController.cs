@@ -12,6 +12,8 @@ public class Hangi_layerController : MonoBehaviour
     private Hangi_LayerSlot branches;
     private Hangi_LayerSlot smallStones;
     private Hangi_LayerSlot largeStones;
+    [SerializeField]
+    private Transform pfUI_Item;
 
 
     private void Awake()

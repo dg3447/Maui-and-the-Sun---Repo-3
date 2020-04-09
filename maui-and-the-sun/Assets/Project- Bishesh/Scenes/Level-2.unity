@@ -4106,10 +4106,23 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1392136724}
+    - target: {fileID: 1138012607, guid: 0092c7e2bcc843e4ab05e011dff6fedf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 384
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138012607, guid: 0092c7e2bcc843e4ab05e011dff6fedf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -125
+      objectReference: {fileID: 0}
     - target: {fileID: 1969835659, guid: 0092c7e2bcc843e4ab05e011dff6fedf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1392136724}
+    - target: {fileID: 2127452537, guid: 0092c7e2bcc843e4ab05e011dff6fedf, type: 3}
+      propertyPath: pfUI_Item
+      value: 
+      objectReference: {fileID: 5907468943554704842, guid: c52dfec10167d054fa0a237de1923d10,
+        type: 3}
     - target: {fileID: 2127712141, guid: 0092c7e2bcc843e4ab05e011dff6fedf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -4129,6 +4142,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1392136724}
+    - target: {fileID: 4172690899003686683, guid: 0092c7e2bcc843e4ab05e011dff6fedf,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ef6f01a1b7f55f744bc87098ad6f1664,
+        type: 3}
+    - target: {fileID: 4172690899003686683, guid: 0092c7e2bcc843e4ab05e011dff6fedf,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4172690899528971746, guid: 0092c7e2bcc843e4ab05e011dff6fedf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4199,6 +4223,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1392136724}
+    - target: {fileID: 4172690899820919817, guid: 0092c7e2bcc843e4ab05e011dff6fedf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0092c7e2bcc843e4ab05e011dff6fedf, type: 3}
 --- !u!1001 &9192078889367949140

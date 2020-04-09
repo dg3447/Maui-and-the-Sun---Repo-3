@@ -26,6 +26,7 @@ public class UI_ItemDrag : MonoBehaviour
         parentRectTransform = transform.parent.GetComponent<RectTransform>();
 
         Hide();
+       
     }
 
     private void Update()
