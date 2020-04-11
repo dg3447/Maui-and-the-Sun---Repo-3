@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 
 public class branches : MonoBehaviour, IDropHandler
 {
+    private CanvasGroup CanvasGroup;
     public event EventHandler<OnItemDroppedEventArgs> OnItemDropped;
     public class OnItemDroppedEventArgs : EventArgs
     {
@@ -23,6 +24,8 @@ public class branches : MonoBehaviour, IDropHandler
             if (eventData.pointerDrag != null)
             {
                 eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+                CanvasGroup = GetComponent<CanvasGroup>();
+                CanvasGroup.alpha = 0;
             }
         }
 

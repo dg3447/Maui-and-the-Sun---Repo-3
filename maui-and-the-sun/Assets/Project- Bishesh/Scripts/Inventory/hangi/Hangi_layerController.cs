@@ -16,7 +16,7 @@ public class Hangi_layerController : MonoBehaviour
     private Transform pfUI_Item;
     private Transform itemContainer;
 
-
+    int count;
     private void Awake()
     {
         itemContainer = transform.Find("itemContainer");
@@ -28,8 +28,9 @@ public class Hangi_layerController : MonoBehaviour
         branches = transform.Find("branches").GetComponent<branches>();
         smallStones = transform.Find("smallStones").GetComponent<smallStones>();
         largeStones = transform.Find("largeStones").GetComponent<largeStones>();
-        
     }
 
+    
+  
   
 }

@@ -8,6 +8,7 @@ using UnityEngine.EventSystems;
 public class vege1 : MonoBehaviour, IDropHandler
 {
     public event EventHandler<OnItemDroppedEventArgs> OnItemDropped;
+    private CanvasGroup CanvasGroup;
     public class OnItemDroppedEventArgs : EventArgs
     {
         public items items;
@@ -23,6 +24,8 @@ public class vege1 : MonoBehaviour, IDropHandler
             if (eventData.pointerDrag != null)
             {
                 eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+                CanvasGroup = GetComponent<CanvasGroup>();
+                CanvasGroup.alpha = 0;
             }
         }
 

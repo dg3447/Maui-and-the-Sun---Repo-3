@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 
 public class soil : MonoBehaviour, IDropHandler
@@ -13,7 +14,8 @@ public class soil : MonoBehaviour, IDropHandler
     {
         public items items;
     }
-
+    private CanvasGroup CanvasGroup;
+    
     public void OnDrop(PointerEventData eventData)
     {
         items items = UI_ItemDrag.Instance.GetItem();
@@ -24,6 +26,9 @@ public class soil : MonoBehaviour, IDropHandler
             if (eventData.pointerDrag != null)
             {
                 eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+                CanvasGroup = GetComponent<CanvasGroup>();
+                CanvasGroup.alpha = 0;
+               
             }
         }
 
