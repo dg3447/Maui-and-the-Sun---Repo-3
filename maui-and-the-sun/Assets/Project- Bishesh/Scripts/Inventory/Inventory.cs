@@ -23,39 +23,14 @@ public class Inventory
         }
 
 
-        addItem(new items { itemType = items.ItemType.hoe, amount = 1 });
-        addItem(new items { itemType = items.ItemType.paddle, amount = 1 });
-        addItem(new items { itemType = items.ItemType.patu, amount = 1 });
-        addItem(new items { itemType = items.ItemType.banana, amount = 1 });
-        addItem(new items { itemType = items.ItemType.chicken, amount = 1 });
-        addItem(new items { itemType = items.ItemType.pumpkin, amount = 1 });
-        addItem(new items { itemType = items.ItemType.carrot, amount = 1 });
-
-
-        addItem(new items { itemType = items.ItemType.hoe, amount = 1 });
-        addItem(new items { itemType = items.ItemType.paddle, amount = 1 });
-        addItem(new items { itemType = items.ItemType.patu, amount = 1 });
-        addItem(new items { itemType = items.ItemType.banana, amount = 1 });
-        addItem(new items { itemType = items.ItemType.chicken, amount = 1 });
-        addItem(new items { itemType = items.ItemType.pumpkin, amount = 1 });
-        addItem(new items { itemType = items.ItemType.carrot, amount = 1 });
-
-        addItem(new items { itemType = items.ItemType.hoe, amount = 1 });
-        addItem(new items { itemType = items.ItemType.paddle, amount = 1 });
-        addItem(new items { itemType = items.ItemType.patu, amount = 1 });
-        addItem(new items { itemType = items.ItemType.banana, amount = 1 });
-        addItem(new items { itemType = items.ItemType.chicken, amount = 1 });
-        addItem(new items { itemType = items.ItemType.pumpkin, amount = 1 });
-        addItem(new items { itemType = items.ItemType.carrot, amount = 1 });
-
-
-        addItem(new items { itemType = items.ItemType.hoe, amount = 1 });
-        addItem(new items { itemType = items.ItemType.paddle, amount = 1 });
-        addItem(new items { itemType = items.ItemType.patu, amount = 1 });
-        addItem(new items { itemType = items.ItemType.banana, amount = 1 });
-        addItem(new items { itemType = items.ItemType.chicken, amount = 1 });
-        addItem(new items { itemType = items.ItemType.pumpkin, amount = 1 });
-        addItem(new items { itemType = items.ItemType.carrot, amount = 1 });
+        addItem(new items { itemType = items.ItemType.soil, amount = 1 });
+        addItem(new items { itemType = items.ItemType.leaves, amount = 1 });
+        addItem(new items { itemType = items.ItemType.vege1, amount = 1 });
+        addItem(new items { itemType = items.ItemType.meat, amount = 1 });
+        addItem(new items { itemType = items.ItemType.vege2, amount = 1 });
+        addItem(new items { itemType = items.ItemType.branches, amount = 1 });
+        addItem(new items { itemType = items.ItemType.smallStones, amount = 1 });
+        addItem(new items { itemType = items.ItemType.largeStones, amount = 1 });
 
     }
 

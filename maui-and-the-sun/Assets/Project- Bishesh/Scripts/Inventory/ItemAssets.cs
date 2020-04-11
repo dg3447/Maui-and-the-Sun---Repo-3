@@ -14,6 +14,15 @@ public class ItemAssets : MonoBehaviour
     public Transform pfItemWorld;
 
 
+    public Sprite soilSprite;
+    public Sprite leavesSprite;
+    public Sprite meatSprite;
+    public Sprite vege1Sprite;
+    public Sprite vege2Sprite;
+    public Sprite branchesSprite;
+    public Sprite smallStonesSprite;
+    public Sprite largeStonesSprite;
+
     public Sprite hoeSprite;
     public Sprite paddleSprite;
     public Sprite patuSprite;
@@ -21,5 +30,8 @@ public class ItemAssets : MonoBehaviour
     public Sprite chickenSprite;
     public Sprite carrotSprite;
     public Sprite pumpkinSprite;
+
+
+   
 
 }

@@ -9,14 +9,22 @@ public class items
 {
     public enum ItemType
     {
-        hoe,
-        paddle,
-        patu,
-        banana,
-        chicken,
-        pumpkin,
-        carrot,
+        hoe,     
+        paddle, 
+        patu,   
+        banana,  
+        chicken,  
+        pumpkin,  
+        carrot,  
 
+        soil,
+        leaves,
+        vege1,
+        meat,
+        vege2,
+        branches,
+        smallStones,
+        largeStones,
     }
 
     public ItemType itemType;
@@ -39,6 +47,14 @@ public class items
             case ItemType.chicken: return ItemAssets.Instance.chickenSprite;
             case ItemType.pumpkin: return ItemAssets.Instance.pumpkinSprite;
 
+            case ItemType.soil: return ItemAssets.Instance.soilSprite;
+            case ItemType.leaves: return ItemAssets.Instance.leavesSprite;
+            case ItemType.vege1: return ItemAssets.Instance.vege1Sprite;
+            case ItemType.meat: return ItemAssets.Instance.meatSprite;
+            case ItemType.vege2: return ItemAssets.Instance.vege2Sprite;
+            case ItemType.branches: return ItemAssets.Instance.branchesSprite;
+            case ItemType.smallStones: return ItemAssets.Instance.smallStonesSprite;
+            case ItemType.largeStones: return ItemAssets.Instance.largeStonesSprite;
         }
     }
 
@@ -48,13 +64,22 @@ public class items
         switch (itemType)
         {
             default:
+            case ItemType.soil:
+            case ItemType.leaves:
+            case ItemType.meat:
+            case ItemType.vege1:
+            case ItemType.vege2:
+            case ItemType.branches:
+            case ItemType.smallStones:
+            case ItemType.largeStones:
+                return true;
+
+           
             case ItemType.hoe:
             case ItemType.paddle:
             case ItemType.patu:
-            return true;
+                return false;
 
-            case ItemType.banana:
-             return false;
         }
     }
 
