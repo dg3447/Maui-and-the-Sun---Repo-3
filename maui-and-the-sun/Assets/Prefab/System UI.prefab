@@ -1886,7 +1886,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1197717185}
-  - component: {fileID: 1084380131989423735}
   m_Layer: 5
   m_Name: soil
   m_TagString: Untagged
@@ -1914,18 +1913,6 @@ RectTransform:
   m_AnchoredPosition: {x: 27, y: 111.1}
   m_SizeDelta: {x: 26.13, y: 25.33}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1084380131989423735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1197717184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aab6f28a00c2824468e01ee8214c1643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1200588001
 GameObject:
   m_ObjectHideFlags: 0
