@@ -18,7 +18,7 @@ public class leaves : MonoBehaviour, IDropHandler
    
     private void Start()
     {
-        checkedImage = transform.Find("checked").GetComponent<Image>();
+        checkedImage = transform.Find("checkedLeaves").GetComponent<Image>();
     }
     public void OnDrop(PointerEventData eventData)
     {
@@ -34,6 +34,7 @@ public class leaves : MonoBehaviour, IDropHandler
                 eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
                 UI_ItemDrag.Instance.Hide();
                 checkedImage.gameObject.SetActive(true);
+                Hangi_layerController.checkmarkCount++;
             }
         }
     }

@@ -17,7 +17,7 @@ public class soil : MonoBehaviour, IDropHandler
     
     private void Start()
     {
-        checkedImage = transform.Find("checked").GetComponent<Image>();
+        checkedImage = transform.Find("checkedSoil").GetComponent<Image>();
     }
 
    
@@ -35,6 +35,7 @@ public class soil : MonoBehaviour, IDropHandler
                 eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
                 UI_ItemDrag.Instance.Hide();
                 checkedImage.gameObject.SetActive(true);
+                Hangi_layerController.checkmarkCount++;
             }
         }
 

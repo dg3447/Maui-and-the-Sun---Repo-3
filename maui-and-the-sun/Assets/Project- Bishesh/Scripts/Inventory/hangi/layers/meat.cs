@@ -14,7 +14,7 @@ public class meat : MonoBehaviour, IDropHandler
 
     private void Start()
     {
-        checkedImage = transform.Find("checked").GetComponent<Image>();
+        checkedImage = transform.Find("checkedMeat").GetComponent<Image>();
     }
     public class OnItemDroppedEventArgs : EventArgs
     {
@@ -33,6 +33,7 @@ public class meat : MonoBehaviour, IDropHandler
                 d.parentToReturn = this.transform;
                 eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
                 checkedImage.gameObject.SetActive(true);
+                Hangi_layerController.checkmarkCount++;
             }
         }
 

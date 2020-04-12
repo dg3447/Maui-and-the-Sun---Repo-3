@@ -72,7 +72,6 @@ public class PlayerMovement : MonoBehaviour
         ItemWorld itemWorld = collision.GetComponent<ItemWorld>();
         if (itemWorld != null)
         {
-
             inventory.addItem(itemWorld.GetItem());
             itemWorld.DestroySelf();
                 
