@@ -12,20 +12,21 @@ public class Hangi_LayerSlot : MonoBehaviour, IDropHandler
     {
         public items items;
     }
-    
+   
     public void OnDrop(PointerEventData eventData)
     {
+
         items items = UI_ItemDrag.Instance.GetItem();
         OnItemDropped?.Invoke(this, new OnItemDroppedEventArgs { items = items });
-        if (items.itemType == items.ItemType.hoe)
+        UI_Item d = eventData.pointerDrag.GetComponent<UI_Item>();
+        if (eventData.pointerDrag != null)
         {
-            Debug.Log("hoe dropped");
-            if (eventData.pointerDrag  != null)
-            {
-                eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-            }
+            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+            UI_ItemDrag.Instance.Hide();
+            d.parentToReturn = this.transform;
+
         }
-        
+
     }
 }
 

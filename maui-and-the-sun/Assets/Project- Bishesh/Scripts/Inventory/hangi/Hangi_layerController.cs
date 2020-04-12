@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hangi_layerController : MonoBehaviour
 {
-    private Hangi_LayerSlot soil;
+    private soil soil;
     private leaves leaves;
     private meat meat;
     private vege1 vege1;
@@ -20,7 +20,7 @@ public class Hangi_layerController : MonoBehaviour
     private void Awake()
     {
         itemContainer = transform.Find("itemContainer");
-        soil = transform.Find("soil").GetComponent<Hangi_LayerSlot>();
+        soil = transform.Find("soil").GetComponent<soil>();
         leaves = transform.Find("leaves").GetComponent<leaves>();
         meat = transform.Find("meat").GetComponent<meat>();
         vege1 = transform.Find("vege1").GetComponent<vege1>();

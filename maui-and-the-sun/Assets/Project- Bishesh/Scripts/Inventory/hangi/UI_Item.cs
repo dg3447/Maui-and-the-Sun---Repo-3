@@ -12,7 +12,8 @@ public class UI_Item : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IE
     private CanvasGroup canvasGroup;
     private Image image;
     private items items;
-
+    public Transform parentToReturn = null;
+   
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -21,8 +22,11 @@ public class UI_Item : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IE
         image = transform.Find("image").GetComponent<Image>();
     }
 
+
     public void OnBeginDrag(PointerEventData eventData)
     {
+        parentToReturn = this.transform.parent;
+        this.transform.SetParent(this.transform.parent.parent);
         canvasGroup.alpha = .5f;
         canvasGroup.blocksRaycasts = false;
         UI_ItemDrag.Instance.Show(items);
@@ -39,6 +43,8 @@ public class UI_Item : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IE
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
         UI_ItemDrag.Instance.Hide();
+        this.transform.SetParent(parentToReturn);
+        
     }
 
     public void OnPointerDown(PointerEventData eventData)

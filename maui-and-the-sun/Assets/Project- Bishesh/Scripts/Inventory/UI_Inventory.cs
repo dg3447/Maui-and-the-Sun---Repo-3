@@ -15,6 +15,7 @@ public class UI_Inventory : MonoBehaviour
     {
         itemSlotContainer = transform.Find("ItemSlotContainer");
         itemSlotTemplate = itemSlotContainer.Find("ItemSlotTemplate");
+
         itemSlotTemplate.gameObject.SetActive(false);
     }
 
@@ -36,9 +37,7 @@ public class UI_Inventory : MonoBehaviour
         foreach (Transform child in itemSlotContainer)
         {
             if (child == itemSlotTemplate) continue;
-            {
-                Destroy(child.gameObject);
-            }
+            Destroy(child.gameObject);
         }
 
         int x = 0;

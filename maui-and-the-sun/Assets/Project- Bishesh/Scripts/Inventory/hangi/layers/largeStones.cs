@@ -2,17 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 
 public class largeStones : MonoBehaviour, IDropHandler
 {
-    private CanvasGroup CanvasGroup;
+    public Image checkedImage;
+   
     public event EventHandler<OnItemDroppedEventArgs> OnItemDropped;
+
+    private void Start()
+    {
+        checkedImage = transform.Find("checked").GetComponent<Image>();
+    }
     public class OnItemDroppedEventArgs : EventArgs
     {
         public items items;
     }
+
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -20,12 +28,12 @@ public class largeStones : MonoBehaviour, IDropHandler
         OnItemDropped?.Invoke(this, new OnItemDroppedEventArgs { items = items });
         if (items.itemType == items.ItemType.largeStones)
         {
-            Debug.Log("chicken dropped");
+            UI_Item d = eventData.pointerDrag.GetComponent<UI_Item>();
             if (eventData.pointerDrag != null)
             {
+                d.parentToReturn = this.transform;
                 eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-                CanvasGroup = GetComponent<CanvasGroup>();
-                CanvasGroup.alpha = 0;
+                checkedImage.gameObject.SetActive(true);
             }
         }
 
