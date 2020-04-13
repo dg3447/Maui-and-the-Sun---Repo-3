@@ -5,8 +5,11 @@ using UnityEngine;
 public class Hangi_layerController : MonoBehaviour
 {
     public static int checkmarkCount = 0;
-   
-   
+    public GameObject MessageBox;
+    public GameObject Inventory;
+    public GameObject Frame;
+
+
     private void Update()
     {
         LayersCompleted();
@@ -15,11 +18,17 @@ public class Hangi_layerController : MonoBehaviour
     {
         if (checkmarkCount == 8)
         {
-            gameObject.SetActive(false);
-            
+            StartCoroutine(RemoveAfterSeconds(3, gameObject));
+            MessageBox.gameObject.SetActive(true);
+            Inventory.gameObject.SetActive(false);
+            Frame.gameObject.SetActive(false);
         }
-        
     }
-  
-  
+    IEnumerator RemoveAfterSeconds(int seconds, GameObject obj)
+    {
+        yield return new WaitForSeconds(3);
+        obj.SetActive(false);
+    }
+
+
 }

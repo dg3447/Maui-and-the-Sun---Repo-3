@@ -37,6 +37,8 @@ public class largeStones : MonoBehaviour, IDropHandler
                 Hangi_layerController.checkmarkCount++;
             }
         }
+        eventData.pointerDrag = null;
+        UI_ItemDrag.Instance.Hide();
 
     }
 }

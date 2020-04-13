@@ -38,6 +38,8 @@ public class vege2 : MonoBehaviour, IDropHandler
                 Hangi_layerController.checkmarkCount++;
             }
         }
+        eventData.pointerDrag = null;
+        UI_ItemDrag.Instance.Hide();
 
     }
 }

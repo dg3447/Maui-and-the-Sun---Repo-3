@@ -36,6 +36,7 @@ public class meat : MonoBehaviour, IDropHandler
                 Hangi_layerController.checkmarkCount++;
             }
         }
-
+        eventData.pointerDrag = null;
+        UI_ItemDrag.Instance.Hide();
     }
 }
