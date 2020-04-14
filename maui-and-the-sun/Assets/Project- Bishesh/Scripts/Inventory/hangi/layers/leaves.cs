@@ -9,7 +9,9 @@ public class leaves : MonoBehaviour, IDropHandler
 {
     public event EventHandler<OnItemDroppedEventArgs> OnItemDropped;
     private Image checkedImage;
-   
+    private int dropCount;
+
+
     public class OnItemDroppedEventArgs : EventArgs
     {
         public items items;
@@ -27,6 +29,7 @@ public class leaves : MonoBehaviour, IDropHandler
 
         if (items.itemType == items.ItemType.leaves)
         {
+            dropCount++;
             UI_Item d = eventData.pointerDrag.GetComponent<UI_Item>();
             if (eventData.pointerDrag != null)
             {
@@ -34,11 +37,19 @@ public class leaves : MonoBehaviour, IDropHandler
                 eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
                 UI_ItemDrag.Instance.Hide();
                 checkedImage.gameObject.SetActive(true);
-                Hangi_layerController.checkmarkCount++;
+                if (dropCount <=1)
+                {
+                    Hangi_layerController.checkmarkCount++;
+                }
             }
+            eventData.pointerDrag = null;
+            UI_ItemDrag.Instance.Hide();
         }
-        eventData.pointerDrag = null;
-        UI_ItemDrag.Instance.Hide();
+        else
+        {
+            dropCount = 0;
+        }
+
     }
 
 

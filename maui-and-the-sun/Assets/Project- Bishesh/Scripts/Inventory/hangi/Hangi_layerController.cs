@@ -8,6 +8,7 @@ public class Hangi_layerController : MonoBehaviour
     public GameObject MessageBox;
     public GameObject Inventory;
     public GameObject Frame;
+   
 
 
     private void Update()
