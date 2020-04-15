@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Inventory inventory;
    
+   
 
     [SerializeField]
     private UI_Inventory uiInventory;
@@ -241,5 +242,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    
 
 }
