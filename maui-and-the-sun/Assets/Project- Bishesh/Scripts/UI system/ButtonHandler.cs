@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 
 public class ButtonHandler : MonoBehaviour
@@ -12,6 +14,9 @@ public class ButtonHandler : MonoBehaviour
     public GameObject hangiInfo;
     public GameObject congratulationBox;
     public GameObject maui;
+    public GameObject hangiImage;
+    public MainMenu MainMenu;
+    public GameObject continueButton;
 
 
 
@@ -28,6 +33,8 @@ public class ButtonHandler : MonoBehaviour
         congratulationBox.gameObject.SetActive(false);
         hangiInfo.gameObject.SetActive(true);
         maui.gameObject.SetActive(false);
+        hangiImage.gameObject.SetActive(true);
+        continueButton.gameObject.SetActive(true);
     }
 
     IEnumerator RemoveAfterSeconds(int seconds, GameObject obj)
@@ -41,5 +48,12 @@ public class ButtonHandler : MonoBehaviour
         Application.OpenURL("https://www.youtube.com/watch?v=7kwu6c7rN0I");
     }
 
+    public void playLevel2()
+    {
+        Destroy(hangiImage.gameObject);
+        Destroy(hangiInfo.gameObject);
+        continueButton.gameObject.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 
 }
