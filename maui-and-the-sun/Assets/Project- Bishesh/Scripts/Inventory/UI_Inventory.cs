@@ -7,18 +7,27 @@ using TMPro;
 public class UI_Inventory : MonoBehaviour
 {
     [SerializeField] private Transform pfUI_Item;
-    private Inventory inventory; //ref
-    private Transform itemSlotContainer;
-    private Transform itemSlotTemplate;
+    public Inventory inventory; //ref
+    public Transform itemSlotContainer;
+    public Transform itemSlotTemplate;
 
-    private void Awake()
+    //private void Awake()
+    //{
+    //    itemSlotContainer = transform.Find("ItemSlotContainer");
+    //    itemSlotTemplate = itemSlotContainer.Find("ItemSlotTemplate");
+
+    //    itemSlotTemplate.gameObject.SetActive(false);
+    //}
+    private void Start()
     {
-        itemSlotContainer = transform.Find("ItemSlotContainer");
+        itemSlotContainer = GetComponent<Transform>();
         itemSlotTemplate = itemSlotContainer.Find("ItemSlotTemplate");
+      //  itemSlotTemplate.gameObject.SetActive(false);
+        //itemSlotContainer = transform.Find("ItemSlotContainer");
+        //itemSlotTemplate = itemSlotContainer.Find("ItemSlotTemplate");
 
-        itemSlotTemplate.gameObject.SetActive(false);
+        //itemSlotTemplate.gameObject.SetActive(false);
     }
-
 
     public void SetInventory (Inventory inventory)
     {

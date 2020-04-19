@@ -62,3 +62,4 @@ MonoBehaviour:
     loop: 0
     pitch: 0
     source: {fileID: 0}
+  audioMixer: {fileID: 0}

@@ -87,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
         myAnimator = GetComponent<Animator>();     //referencing the Animator component of the player
         currentHealth = maxHealth;            
         healthbar.setMaxHealth(maxHealth);       //setting max health for player
+
     }
 
 

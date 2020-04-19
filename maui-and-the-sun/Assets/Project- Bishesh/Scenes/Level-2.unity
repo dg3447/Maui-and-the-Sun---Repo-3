@@ -1395,7 +1395,7 @@ MonoBehaviour:
   meatSprite: {fileID: 21300000, guid: a44d570d453b65149811508b3772315e, type: 3}
   vege1Sprite: {fileID: 21300000, guid: 663112adf6e9d4a4bb576c0b000b7ee8, type: 3}
   vege2Sprite: {fileID: 21300000, guid: 63b689c5b11b825479b8887460784b9d, type: 3}
-  branchesSprite: {fileID: 21300000, guid: 7984d7232c169424c9ed77419c57ea0a, type: 3}
+  branchesSprite: {fileID: 21300000, guid: 9641f48ad9e09c44eb7cbd3fd818361d, type: 3}
   smallStonesSprite: {fileID: 21300000, guid: d1428682d32b01d47a780ada0cb3787e, type: 3}
   largeStonesSprite: {fileID: 21300000, guid: 54fbfa16658fed34aa410e9370bb3cc4, type: 3}
   hoeSprite: {fileID: 21300000, guid: 234a672fc5afb1b44b32bea884b58115, type: 3}
@@ -5632,11 +5632,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
-    - target: {fileID: 9172500503212728496, guid: 709f15a8f97f39c41853c11f0ef13378,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9172500503212728498, guid: 709f15a8f97f39c41853c11f0ef13378,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8785,6 +8780,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ch-Maui
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192078888017162388, guid: edfc55d639255b641b04eb4c35948919,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 9192078888017162391, guid: edfc55d639255b641b04eb4c35948919,
         type: 3}
