@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
@@ -53,9 +54,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+       
+        if (SceneManager.GetActiveScene().name == "Level-2")
+        {
+            inventory = new Inventory(UseItem, 25);
+            uiInventory.SetInventory(inventory);
+        }
 
-        inventory = new Inventory(UseItem, 25);
-        uiInventory.SetInventory(inventory);
     }
 
     public void UseItem(items inventoryItem)
@@ -243,6 +248,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    
+    public void increaseHealth(int healthPlus)
+    {
+        currentHealth += healthPlus;
+        healthbar.setHealth(currentHealth);
+    }
 
 }
