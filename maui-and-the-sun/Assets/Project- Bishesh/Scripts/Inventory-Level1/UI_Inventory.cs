@@ -11,23 +11,14 @@ public class UI_Inventory : MonoBehaviour
     public Transform itemSlotContainer;
     public Transform itemSlotTemplate;
 
-    //private void Awake()
-    //{
-    //    itemSlotContainer = transform.Find("ItemSlotContainer");
-    //    itemSlotTemplate = itemSlotContainer.Find("ItemSlotTemplate");
-
-    //    itemSlotTemplate.gameObject.SetActive(false);
-    //}
-    private void Start()
+    private void Awake()
     {
-        itemSlotContainer = GetComponent<Transform>();
+        itemSlotContainer = transform.Find("ItemSlotContainer");
         itemSlotTemplate = itemSlotContainer.Find("ItemSlotTemplate");
-      //  itemSlotTemplate.gameObject.SetActive(false);
-        //itemSlotContainer = transform.Find("ItemSlotContainer");
-        //itemSlotTemplate = itemSlotContainer.Find("ItemSlotTemplate");
 
-        //itemSlotTemplate.gameObject.SetActive(false);
+        itemSlotTemplate.gameObject.SetActive(false);
     }
+   
 
     public void SetInventory (Inventory inventory)
     {

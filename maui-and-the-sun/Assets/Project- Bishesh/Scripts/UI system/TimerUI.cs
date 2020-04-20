@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class TimerUI : MonoBehaviour
 {
     // code to change after completion of level 2
-    public static float countdownStartValue = 100000;
+    public static float countdownStartValue = 0;
     public Text timerUI;
     [SerializeField]
     GameObject gameOverScrn;
@@ -21,7 +21,7 @@ public class TimerUI : MonoBehaviour
     {
         gameOverScrn = GameObject.Find("gameOverScreen");
         player = GameObject.Find("Ch-Maui");
-       //  gameOverScrn.SetActive(false);                     // code to change after completion of level 2
+        gameOverScrn.SetActive(false);                     
         countdownTimer();
 
     }
@@ -35,16 +35,14 @@ public class TimerUI : MonoBehaviour
             countdownStartValue--;
             Invoke("countdownTimer", 1.0f);
         }
-        else
-        {
 
-            timerUI.text = "Time up!";
-            gameOverScrn.SetActive(true);
-
-            Destroy(player.gameObject);
-          
-
-        }
+        //uncomment this code after completion of all levels
+        //else
+        //{
+        //    timerUI.text = "Time up!";
+        //    gameOverScrn.SetActive(true);
+        //    Destroy(player.gameObject);
+        //}
     }
 
    

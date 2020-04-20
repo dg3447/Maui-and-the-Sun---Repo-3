@@ -22,17 +22,14 @@ public class ModeSelection : MonoBehaviour
     {
         if (easy.isOn)
         {
-            Debug.Log("easy");
             TimerUI.countdownStartValue = 600;
         }
         else if (intermediate.isOn)
         {
-            Debug.Log("intermediate");
             TimerUI.countdownStartValue = 300;
         }
         else if (hard.isOn)
         {
-            Debug.Log("hard");
             TimerUI.countdownStartValue = 150;
         }
     }

@@ -7,15 +7,14 @@ using TMPro;
 public class playerDeath : MonoBehaviour
 {
     private PlayerMovement player;
-    private gameOverMenu gameOver;
+    public GameObject gameOver;
     private TimerUI timer;
-   
+
 
     private void Start()
     {
         player = GameObject.Find("Ch-Maui").GetComponent<PlayerMovement>();
-        gameOver = GameObject.Find("gameOverScreen").GetComponent<gameOverMenu>();
-        timer = GameObject.Find("Timer").GetComponent<TimerUI>();
+         timer = GameObject.Find("Timer").GetComponent<TimerUI>();
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
