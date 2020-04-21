@@ -13,15 +13,20 @@ public class ItemAssets : MonoBehaviour
 
     public Transform pfItemWorld;
 
+    public Sprite dirtSprite;
 
     public Sprite soilSprite;
     public Sprite leavesSprite;
-    public Sprite meatSprite;
     public Sprite vege1Sprite;
     public Sprite vege2Sprite;
-    public Sprite branchesSprite;
+    public Sprite vege3Sprite;
+    public Sprite vege4Sprite;
+    public Sprite vege5Sprite;
+    public Sprite meatSprite;
     public Sprite smallStonesSprite;
     public Sprite largeStonesSprite;
+    public Sprite fireSprite;
+    public Sprite branchesSprite;
 
     public Sprite hoeSprite;
     public Sprite paddleSprite;

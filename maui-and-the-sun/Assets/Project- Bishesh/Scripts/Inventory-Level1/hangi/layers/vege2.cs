@@ -9,7 +9,7 @@ using UnityEngine.EventSystems;
 public class vege2 : MonoBehaviour, IDropHandler
 {
 
-    public Image checkedImage;
+    private Image checkedImage;
     private int dropCount;
 
     public event EventHandler<OnItemDroppedEventArgs> OnItemDropped;
@@ -28,7 +28,9 @@ public class vege2 : MonoBehaviour, IDropHandler
     {
         items items = UI_ItemDrag.Instance.GetItem();
         OnItemDropped?.Invoke(this, new OnItemDroppedEventArgs { items = items });
-        if (items.itemType == items.ItemType.vege2 || items.itemType == items.ItemType.vege1)
+        if (items.itemType == items.ItemType.vege1 || items.itemType == items.ItemType.vege2 ||
+            items.itemType == items.ItemType.vege3 || items.itemType == items.ItemType.vege4 ||
+            items.itemType == items.ItemType.vege5)
         {
             dropCount++;
             UI_Item d = eventData.pointerDrag.GetComponent<UI_Item>();

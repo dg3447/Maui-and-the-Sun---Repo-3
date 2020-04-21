@@ -17,14 +17,19 @@ public class items
         pumpkin,  
         carrot,  
 
+       
         soil,
         leaves,
         vege1,
-        meat,
         vege2,
-        branches,
+        vege3,
+        vege4,
+        vege5,
+        meat,
         smallStones,
         largeStones,
+        fire,
+        branches,
     }
 
     public ItemType itemType;
@@ -47,14 +52,20 @@ public class items
             case ItemType.chicken: return ItemAssets.Instance.chickenSprite;
             case ItemType.pumpkin: return ItemAssets.Instance.pumpkinSprite;
 
+           
             case ItemType.soil: return ItemAssets.Instance.soilSprite;
             case ItemType.leaves: return ItemAssets.Instance.leavesSprite;
             case ItemType.vege1: return ItemAssets.Instance.vege1Sprite;
-            case ItemType.meat: return ItemAssets.Instance.meatSprite;
             case ItemType.vege2: return ItemAssets.Instance.vege2Sprite;
-            case ItemType.branches: return ItemAssets.Instance.branchesSprite;
+            case ItemType.vege3: return ItemAssets.Instance.vege3Sprite;
+            case ItemType.vege4: return ItemAssets.Instance.vege4Sprite;
+            case ItemType.vege5: return ItemAssets.Instance.vege5Sprite;
+            case ItemType.meat: return ItemAssets.Instance.meatSprite;
+
             case ItemType.smallStones: return ItemAssets.Instance.smallStonesSprite;
             case ItemType.largeStones: return ItemAssets.Instance.largeStonesSprite;
+            case ItemType.fire: return ItemAssets.Instance.fireSprite;
+            case ItemType.branches: return ItemAssets.Instance.branchesSprite;
         }
     }
 
@@ -64,14 +75,20 @@ public class items
         switch (itemType)
         {
             default:
+           
             case ItemType.soil:
             case ItemType.leaves:
-            case ItemType.meat:
             case ItemType.vege1:
             case ItemType.vege2:
-            case ItemType.branches:
+            case ItemType.vege3:
+            case ItemType.vege4:
+            case ItemType.vege5:
+            case ItemType.meat:
             case ItemType.smallStones:
             case ItemType.largeStones:
+            case ItemType.fire:
+            case ItemType.branches:
+
                 return true;
 
            

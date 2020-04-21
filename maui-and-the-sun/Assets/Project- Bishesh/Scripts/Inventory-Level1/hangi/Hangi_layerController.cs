@@ -8,8 +8,8 @@ public class Hangi_layerController : MonoBehaviour
     public GameObject MessageBox;
     public GameObject Inventory;
     public GameObject Frame;
-   
-   
+
+
 
 
     private void Update()
@@ -18,7 +18,7 @@ public class Hangi_layerController : MonoBehaviour
     }
     public void LayersCompleted()
     {
-        if (checkmarkCount == 8)
+        if (checkmarkCount == 12)
         {
             StartCoroutine(RemoveAfterSeconds(3, gameObject));
             MessageBox.gameObject.SetActive(true);

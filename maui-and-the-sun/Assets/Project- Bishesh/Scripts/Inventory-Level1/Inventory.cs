@@ -31,6 +31,9 @@ public class Inventory
         addItem(new items { itemType = items.ItemType.branches, amount = 1 });
         addItem(new items { itemType = items.ItemType.smallStones, amount = 1 });
         addItem(new items { itemType = items.ItemType.largeStones, amount = 1 });
+        addItem(new items { itemType = items.ItemType.fire, amount = 1 });
+
+
 
     }
 

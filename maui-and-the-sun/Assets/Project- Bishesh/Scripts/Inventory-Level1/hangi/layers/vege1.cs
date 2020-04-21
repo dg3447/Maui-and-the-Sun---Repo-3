@@ -25,7 +25,9 @@ public class vege1 : MonoBehaviour, IDropHandler
     {
         items items = UI_ItemDrag.Instance.GetItem();
         OnItemDropped?.Invoke(this, new OnItemDroppedEventArgs { items = items });
-        if (items.itemType == items.ItemType.vege1 || items.itemType == items.ItemType.vege2)
+        if (items.itemType == items.ItemType.vege1 || items.itemType == items.ItemType.vege2 ||
+            items.itemType == items.ItemType.vege3 || items.itemType == items.ItemType.vege4 ||
+            items.itemType == items.ItemType.vege5)
         {
             dropCount++;
             UI_Item d = eventData.pointerDrag.GetComponent<UI_Item>();
