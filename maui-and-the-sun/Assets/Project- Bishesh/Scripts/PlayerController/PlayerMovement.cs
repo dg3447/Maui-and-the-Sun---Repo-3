@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -38,6 +39,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float jumpForce;
 
+    //point system
+    [SerializeField]
+    private TextMeshProUGUI healtpotionCounter, flaxplantCounter, woodCounter;
+    private int healtpotionAmount, flaxplantAmount, woodAmount;
 
     //healthbar
     public int maxHealth = 3;
@@ -45,21 +50,45 @@ public class PlayerMovement : MonoBehaviour
     public HealthBar healthbar;
 
     private Inventory inventory;
-   
-   
-
     [SerializeField]
     private UI_Inventory uiInventory;
 
 
     private void Awake()
     {
-       
         if (SceneManager.GetActiveScene().name == "Level-2")
         {
             inventory = new Inventory(UseItem, 25);
             uiInventory.SetInventory(inventory);
         }
+    }
+
+  
+    void Start()
+    {
+        facingRight = true;     //player always face on right direction
+        myRigidbody = GetComponent<Rigidbody2D>();  //referencing the rigidbody2d component of the player
+        myAnimator = GetComponent<Animator>();     //referencing the Animator component of the player
+        currentHealth = maxHealth;            
+        healthbar.setMaxHealth(maxHealth);       //setting max health for player
+
+        //collectables
+        healtpotionAmount = 0;
+        flaxplantAmount = 0;
+        woodAmount = 0;
+
+    }
+
+
+    private void Update() 
+    {
+        HandleInput();
+
+        //update amount of collectables
+        healtpotionCounter.text = "" + healtpotionAmount;
+        flaxplantCounter.text = "" + flaxplantAmount;
+        woodCounter.text = "" + woodAmount;
+
 
     }
 
@@ -72,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
         return inventory;
     }
 
-//collecting Ingredients
+    //collecting Ingredients
     private void OnTriggerEnter2D(Collider2D collision)
     {
         ItemWorld itemWorld = collision.GetComponent<ItemWorld>();
@@ -80,28 +109,48 @@ public class PlayerMovement : MonoBehaviour
         {
             inventory.addItem(itemWorld.GetItem());
             itemWorld.DestroySelf();
-                
+
         }
+
+        if (collision.GetComponent<HealthPotion>())
+        {
+            healtpotionAmount += 1;
+            Destroy(collision.gameObject);
+        }
+        if (collision.GetComponent<FlaxPlant>())
+        {
+            flaxplantAmount += 1;
+            Destroy(collision.gameObject);
+        }
+        if (collision.GetComponent<Wood>())
+        {
+            woodAmount += 1;
+            Destroy(collision.gameObject);
+        }
+
     }
 
-
-    void Start()
+    private bool count;
+    public void useHealthPotion()
     {
-        facingRight = true;     //player always face on right direction
-        myRigidbody = GetComponent<Rigidbody2D>();  //referencing the rigidbody2d component of the player
-        myAnimator = GetComponent<Animator>();     //referencing the Animator component of the player
-        currentHealth = maxHealth;            
-        healthbar.setMaxHealth(maxHealth);       //setting max health for player
-
+        
+        if (!(healtpotionAmount <= 0))
+        {
+            count = true;
+            healtpotionAmount -= 1;
+            increaseHealth(1);
+        }
+        if (healtpotionAmount <= 0)
+        {
+            healtpotionAmount = 0;
+            count = false;
+        }
+        //if (count == false)
+        //{
+           
+        //}
     }
 
-
-    private void Update() 
-    {
-        HandleInput();
-    }
-
-   
 
     void FixedUpdate()    //fixedUpdate updates on fixed amount of time, regardless of frames  
     {

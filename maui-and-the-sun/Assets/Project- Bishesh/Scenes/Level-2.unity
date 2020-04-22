@@ -986,7 +986,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 230677518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 164.73264, y: 7.602459, z: -10}
+  m_LocalPosition: {x: 12.952643, y: 7.602459, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 420740736}
@@ -5158,7 +5158,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277512194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 164.73264, y: 7.602459, z: -10}
+  m_LocalPosition: {x: 14.459002, y: 7.60246, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8741,6 +8741,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: checkedVege3
       objectReference: {fileID: 0}
+    - target: {fileID: 328509724, guid: 0092c7e2bcc843e4ab05e011dff6fedf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 469587733, guid: 0092c7e2bcc843e4ab05e011dff6fedf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -8753,6 +8757,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 554375800}
+    - target: {fileID: 1138012606, guid: 0092c7e2bcc843e4ab05e011dff6fedf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1416983573, guid: 0092c7e2bcc843e4ab05e011dff6fedf, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -15.7
@@ -8901,7 +8909,7 @@ PrefabInstance:
     - target: {fileID: 9192078888017162384, guid: edfc55d639255b641b04eb4c35948919,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 166.48
+      value: 14.7
       objectReference: {fileID: 0}
     - target: {fileID: 9192078888017162384, guid: edfc55d639255b641b04eb4c35948919,
         type: 3}

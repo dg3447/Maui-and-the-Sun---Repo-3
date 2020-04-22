@@ -4796,35 +4796,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9172500503212728497, guid: 709f15a8f97f39c41853c11f0ef13378,
         type: 3}
-      propertyPath: sounds.Array.data[1].clip
+      propertyPath: sounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172500503212728497, guid: 709f15a8f97f39c41853c11f0ef13378,
+        type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: kai_karakia
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172500503212728497, guid: 709f15a8f97f39c41853c11f0ef13378,
+        type: 3}
+      propertyPath: sounds.Array.data[3].clip
       value: 
-      objectReference: {fileID: 8300000, guid: d9b1eb783ba79df4db488acb78b15cf5, type: 3}
+      objectReference: {fileID: 8300000, guid: 25e9ba30717845b4c81734d165546686, type: 3}
     - target: {fileID: 9172500503212728497, guid: 709f15a8f97f39c41853c11f0ef13378,
         type: 3}
-      propertyPath: sounds.Array.data[1].name
-      value: backgroundMusic
+      propertyPath: sounds.Array.data[3].volume
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 9172500503212728497, guid: 709f15a8f97f39c41853c11f0ef13378,
         type: 3}
-      propertyPath: sounds.Array.data[1].loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9172500503212728497, guid: 709f15a8f97f39c41853c11f0ef13378,
-        type: 3}
-      propertyPath: sounds.Array.data[1].volume
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 9172500503212728497, guid: 709f15a8f97f39c41853c11f0ef13378,
-        type: 3}
-      propertyPath: sounds.Array.data[1].pitch
-      value: 1.02
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 9172500503212728497, guid: 709f15a8f97f39c41853c11f0ef13378,
         type: 3}
       propertyPath: audioMixer
       value: 
-      objectReference: {fileID: 24100000, guid: f76f74bca0cec0d4bb7cb9e2f27686f6,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 9172500503212728498, guid: 709f15a8f97f39c41853c11f0ef13378,
         type: 3}
       propertyPath: m_LocalPosition.x

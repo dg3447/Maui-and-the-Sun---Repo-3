@@ -1,12 +1,13 @@
 ﻿using UnityEngine.Audio;
 using UnityEngine;
 using System;
-
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
     //playing sound into the scene
-    public Sound[] sounds;  
+    public Sound[] sounds;
+    private Scene scene;
 
     public static AudioManager instance;
     void Awake()
@@ -34,7 +35,21 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-       Play("backgroundMusic");
+        scene = SceneManager.GetActiveScene();
+       
+        if (scene.name == "UI System")
+        {
+            Play("backgroundMusic");
+            Play("kai_karakia");
+        }
+        if (scene.name == "Cut_Scene")
+        {
+            Debug.Log(scene.name);
+            Play("Opening_scene");
+        }
+        
+        
+       
     }
 
     public void Play (string name)

@@ -50,16 +50,16 @@ MonoBehaviour:
     loop: 0
     pitch: 0.67
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
+  - name: backgroundMusic
+    clip: {fileID: 8300000, guid: d9b1eb783ba79df4db488acb78b15cf5, type: 3}
+    volume: 0.04
+    loop: 1
+    pitch: 1.02
+    source: {fileID: 0}
+  - name: Opening_scene
+    clip: {fileID: 8300000, guid: dbff7914abfc4284791e97e80e714b53, type: 3}
+    volume: 0.28
     loop: 0
     pitch: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    loop: 0
-    pitch: 0
-    source: {fileID: 0}
-  audioMixer: {fileID: 0}
+  audioMixer: {fileID: 24100000, guid: f76f74bca0cec0d4bb7cb9e2f27686f6, type: 2}

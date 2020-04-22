@@ -121,6 +121,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &236029765 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9172500503212728497, guid: 709f15a8f97f39c41853c11f0ef13378,
+    type: 3}
+  m_PrefabInstance: {fileID: 973389778}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75b1c4b7941f45d4e90e9f060989aa79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &318289844
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +174,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &412278542
 GameObject:
@@ -249,6 +261,17 @@ MonoBehaviour:
       - m_Target: {fileID: 318289845}
         m_MethodName: PlayGame
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 236029765}
+        m_MethodName: Play
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -558,6 +581,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 935745606}
   m_CullTransparentMesh: 0
+--- !u!1001 &973389778
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9172500503212728496, guid: 709f15a8f97f39c41853c11f0ef13378,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172500503212728498, guid: 709f15a8f97f39c41853c11f0ef13378,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 418.1581
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172500503212728498, guid: 709f15a8f97f39c41853c11f0ef13378,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 180.4079
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172500503212728498, guid: 709f15a8f97f39c41853c11f0ef13378,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6758.592
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172500503212728498, guid: 709f15a8f97f39c41853c11f0ef13378,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172500503212728498, guid: 709f15a8f97f39c41853c11f0ef13378,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172500503212728498, guid: 709f15a8f97f39c41853c11f0ef13378,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172500503212728498, guid: 709f15a8f97f39c41853c11f0ef13378,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172500503212728498, guid: 709f15a8f97f39c41853c11f0ef13378,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172500503212728498, guid: 709f15a8f97f39c41853c11f0ef13378,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172500503212728498, guid: 709f15a8f97f39c41853c11f0ef13378,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172500503212728498, guid: 709f15a8f97f39c41853c11f0ef13378,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 709f15a8f97f39c41853c11f0ef13378, type: 3}
 --- !u!1 &1095059965
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +743,7 @@ RectTransform:
   - {fileID: 412278543}
   - {fileID: 648276780}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -739,7 +831,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1921563524
 GameObject:
@@ -805,7 +897,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2067540342
 GameObject:
@@ -862,12 +954,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Time is running out, Komaru is about to set. We need to quickly prepare
-    our meals. Quick guys let us gather our resources to make our Hangi. Oh how I
-    wish Komaru was a bit more kind towards us and stayed for longer. We really are
-    at Komaru\u2019s mercy. Nevertheless, let us focus on making Hangi for now. \n\nKia
-    Ora,\n\nCollect all necessary ingredients and make the Hangi. You will have to
-    put the Hangi in the right order to succeed this level. \n\nWaimaria"
+  m_text: "Time is running out, Te ra is about to set. We need to quickly prepare
+    our kai. Quick guys let us gather our resources to make our Hangi. Oh how I wish
+    Te ra was a bit more kind towards us and stayed for longer. We really are at
+    Te ra\u2019s mercy. Nevertheless, let us focus on making Hangi for now. \n\nKia
+    Ora,\n\nCollect all the necessary ingredients and make the Hangi. You will have
+    to put the Hangi in the right order to succeed this level. \n\nWaimaria!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -938,8 +1030,8 @@ MonoBehaviour:
     textComponent: {fileID: 2067540344}
     characterCount: 450
     spriteCount: 0
-    spaceCount: 88
-    wordCount: 84
+    spaceCount: 92
+    wordCount: 88
     linkCount: 0
     lineCount: 21
     pageCount: 1
