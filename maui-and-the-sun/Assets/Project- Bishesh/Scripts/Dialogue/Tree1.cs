@@ -11,6 +11,7 @@ public class Tree1 : MonoBehaviour
     public string[] sentences;
     private int index;
     public float typingSpeed;
+    
 
 
     public void Start()
@@ -69,8 +70,9 @@ public class Tree1 : MonoBehaviour
     public void stopDialogue()
     {
         firstTree.SetActive(false);
+
     }
 
-
+   
 
 }

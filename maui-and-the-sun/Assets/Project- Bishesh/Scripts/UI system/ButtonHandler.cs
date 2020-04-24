@@ -17,6 +17,7 @@ public class ButtonHandler : MonoBehaviour
     public GameObject hangiImage;
     public MainMenu MainMenu;
     public GameObject continueButton;
+    public GameObject audioSound;
 
 
 
@@ -39,7 +40,7 @@ public class ButtonHandler : MonoBehaviour
 
     IEnumerator RemoveAfterSeconds(int seconds, GameObject obj)
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(15);
         obj.SetActive(false);
     }
 
@@ -56,4 +57,13 @@ public class ButtonHandler : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void playsong()
+    {
+        FindObjectOfType<AudioManager>().Play("button_press");
+    }
+
+    public void playAudio()
+    {
+        audioSound.SetActive(true);
+    }
 }

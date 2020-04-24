@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 2 v1.0.unity
     guid: 7cb894974e945054b97d37adb1ce1c59
   - enabled: 1
+    path: Assets/Project- Bishesh/Scenes/Chanting_Rope.unity
+    guid: df2062dcfc208c542b7f9345d114aade
+  - enabled: 1
     path: Assets/Scenes/Level 3 v1.0.unity
     guid: f39b0744ff88bd5428cf13334a6d9059
   m_configObjects: {}

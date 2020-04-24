@@ -11,6 +11,7 @@ public class Tree2 : MonoBehaviour
     public string[] sentences;
     private int index;
     public float typingSpeed;
+    public GameObject audio;
 
 
     public void Start()
@@ -63,6 +64,7 @@ public class Tree2 : MonoBehaviour
         {
             textDisplay.text = "";
             stopDialogue();
+            audio.gameObject.SetActive(true);
         }
     }
 

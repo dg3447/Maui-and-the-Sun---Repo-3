@@ -48,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
     public int maxHealth = 3;
     public int currentHealth;
     public HealthBar healthbar;
+   
 
     private Inventory inventory;
     [SerializeField]
@@ -61,6 +62,10 @@ public class PlayerMovement : MonoBehaviour
             inventory = new Inventory(UseItem, 25);
             uiInventory.SetInventory(inventory);
         }
+        if (SceneManager.GetActiveScene().name == "Chanting_Rope")
+        {
+           
+        }
     }
 
   
@@ -69,27 +74,34 @@ public class PlayerMovement : MonoBehaviour
         facingRight = true;     //player always face on right direction
         myRigidbody = GetComponent<Rigidbody2D>();  //referencing the rigidbody2d component of the player
         myAnimator = GetComponent<Animator>();     //referencing the Animator component of the player
-        currentHealth = maxHealth;            
-        healthbar.setMaxHealth(maxHealth);       //setting max health for player
+        currentHealth = maxHealth;
+        if (SceneManager.GetActiveScene().name == "Level-2" || SceneManager.GetActiveScene().name == "Level 2 v1.0")
+        {
+            healthbar.setMaxHealth(maxHealth);       //setting max health for player
+        }
+       
 
         //collectables
-        healtpotionAmount = 0;
-        flaxplantAmount = 0;
-        woodAmount = 0;
-
+        if (SceneManager.GetActiveScene().name == "Level 2 v1.0")
+        {
+            healtpotionAmount = 0;
+            flaxplantAmount = 0;
+            woodAmount = 0;
+        }
     }
 
 
     private void Update() 
     {
         HandleInput();
-
-        //update amount of collectables
-        healtpotionCounter.text = "" + healtpotionAmount;
-        flaxplantCounter.text = "" + flaxplantAmount;
-        woodCounter.text = "" + woodAmount;
-
-
+        
+        if (SceneManager.GetActiveScene().name == "Level 2 v1.0")
+        {
+            //update amount of collectables
+            healtpotionCounter.text = "" + healtpotionAmount;
+            flaxplantCounter.text = "" + flaxplantAmount;
+            woodCounter.text = "" + woodAmount;
+        }
     }
 
     public void UseItem(items inventoryItem)
