@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Project- Bishesh/Scenes/Chanting_Rope.unity
+- path: Assets/Project- Bishesh/Scenes/UI System.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
